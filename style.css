@@ -1,0 +1,14 @@
+body {
+	padding-top: 20px;
+	padding-bottom: 40px;
+	font-family: Avenir, \5FAE\8EDF\6B63\9ED1\9AD4, Lucida Grande, Calibri, Trebuchet MS, Helvetica, Arial, Hiragino Sans GB, WenQuanYi Micro Hei, STHeiti, Microsoft Jhenghei, Nanum Gothic, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+input, textarea{
+	font-family: inherit;
+	-webkit-font-smoothing: inherit;
+}
+.container-narrow {
+	margin: 0 auto;
+	max-width: 1024px;
+}
