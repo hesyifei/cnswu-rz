@@ -1,6 +1,6 @@
-China Student Webmasters` Union Valid System
+China Student Webmasters` Union Verification System
 =====
 
-China Student Webmasters` Union Valid System Source Code
+China Student Webmasters` Union Verification System Source Code
 
-Valid on http://rz.cnswu.org/
+(Note: Verify on http://rz.cnswu.org/)
