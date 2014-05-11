@@ -10,6 +10,7 @@ $site_file = file_get_contents("site.php");
 
 //將「site.php」內的域名由「|」分開
 $site = explode("|", $site_file);
+
 /*
 //取得存有二級域名資料的PHP內容
 $subdomain_file = file_get_contents("subdomain.php");
@@ -17,6 +18,7 @@ $subdomain_file = file_get_contents("subdomain.php");
 //將「subdomain.php」內的域名由「|」分開
 $subdomain = explode("|", $site_file);
 */
+
 //將鏈接地址中的字母轉換為小寫
 $url = strtolower($url);
 
@@ -46,9 +48,6 @@ if (!empty($site_url_array['1'])){				//如果是搜索網頁
 }else{
 	$site_url_name = "站点";
 }
-
-//分割出域名的最後兩個「.」中的內容
-//preg_match("/[\w\-]+\.\w+$/", $site_url_array[0], $url);
 
 /*************************************主程序********************************/
 
