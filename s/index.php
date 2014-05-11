@@ -48,7 +48,7 @@ if (!empty($site_url_array['1'])){				//如果是搜索網頁
 }
 
 //分割出域名的最後兩個「.」中的內容
-preg_match("/[\w\-]+\.\w+$/", $site_url_array[0], $url);
+//preg_match("/[\w\-]+\.\w+$/", $site_url_array[0], $url);
 
 /*************************************主程序********************************/
 
@@ -74,7 +74,7 @@ if(check_domain($ssite, $url)){
 	//將可信認證設定為TRUE
 	$url_rz = TRUE;
 	$header = @get_headers($url_long);
-	if($header[0] == "HTTP/1.1 200 OK"){
+	if(preg_match('/200/', $header[0])){
 		//讀取網頁源始碼
 		$url_fp = file_get_contents($url_long);
 		//轉換UTF-8代碼
@@ -85,7 +85,7 @@ if(check_domain($ssite, $url)){
 		$metatag = get_meta_tags($url_long);
 		$description = $metatag["description"];
 		$keywords = $metatag["keywords"];
-	}else if($header[0] == "HTTP/1.1 301 Moved Permanently"){
+	}else if(preg_match('/301/', $header[0])){
 		$title = "亲～您的确是一个认证成员，但你输入的网址是一个301跳转页面";
 		$description = "所以我们无法提取您网站的信息哦！";
 		$keywords = "如有不便，尽情谅解！";
