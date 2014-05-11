@@ -3,8 +3,8 @@
 <div class="footer">
 	<p>
 		© <a href="<?php echo URL; ?>" title="<?php echo NAME; ?>" target="_blank"><?php echo NAME; ?></a>
-		<a href="http://www.homei123.com/" title="快乐家园（模板+程序）" target="_blank">快乐家园</a>
 		<a href="http://www.arefly.com/" title="超級efly（程序）" target="_blank">超級efly</a>
+		<a href="http://www.homei123.com/" title="快乐家园（模板+程序）" target="_blank">快乐家园</a>
 		<a href="http://俞.tk/" title="Ytf4425（思考+程序+现已退出开发）" target="_blank">Ytf4425</a>
 		<a href="http://cn.sicker.asia/" title="Sicker（思考+程序）" target="_blank">Sicker</a>
 		<a href="http://www.dsu.pw/" title="Goy（思考+程序）" target="_blank">Goy</a>
