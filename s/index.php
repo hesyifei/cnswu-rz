@@ -51,8 +51,26 @@ if (!empty($site_url_array['1'])){				//如果是搜索網頁
 preg_match("/[\w\-]+\.\w+$/", $site_url_array[0], $url);
 
 /*************************************主程序********************************/
+
+function check_domain($vaild_url, $from_url){
+	$from_url_dot = explode($vaild_url, $from_url);
+	if(empty($from_url_dot[1])){
+		$from_url_dot_explode = explode(".", $from_url_dot[0]);
+		if(isset($from_url_dot_explode[1])){
+			$from_host = $from_url_dot_explode[1];
+		}else{
+			$from_host = $from_url_dot_explode[0];
+		}
+		if(!empty($from_host)){
+			return FALSE;
+		}else{
+			return TRUE;
+		}
+	}
+}
+
 foreach ($site as $ssite) {
-if(preg_match("{".$ssite."}", $url[0])){
+if(check_domain($ssite, $url)){
 	//將可信認證設定為TRUE
 	$url_rz = TRUE;
 	$header = @get_headers($url_long);
